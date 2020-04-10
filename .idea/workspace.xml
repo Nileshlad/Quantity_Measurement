@@ -9,6 +9,7 @@
       <change beforePath="$PROJECT_DIR$/.gradle/5.2.1/javaCompile/classAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.2.1/javaCompile/classAnalysis.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/5.2.1/javaCompile/javaCompile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.2.1/javaCompile/javaCompile.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/classes/java/test/QuantityMeasurementTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/test/QuantityMeasurementTest.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/reports/tests/test/classes/QuantityMeasurementTest.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/tests/test/classes/QuantityMeasurementTest.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/reports/tests/test/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/tests/test/index.html" afterDir="false" />
@@ -72,27 +73,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Gradle.QuantityMeasurementTest.givenSameReferenceOfFeet_shouldReturnEqualOperatorTrue">
-    <configuration name="QuantityMeasurementTest.givenNullMesure_shouldReturnException" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="--tests &quot;QuantityMeasurementTest.givenNullMesure_shouldReturnException&quot;" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value=":cleanTest" />
-            <option value=":test" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <GradleScriptDebugEnabled>false</GradleScriptDebugEnabled>
-      <method v="2" />
-    </configuration>
+  <component name="RunManager" selected="Gradle.QuantityMeasurementTest.givenValueCheckOfFeet_shouldReturnEqualOperatorTrue">
     <configuration name="QuantityMeasurementTest.givenSameReferenceOfFeet_shouldReturnEqual" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -153,12 +134,32 @@
       <GradleScriptDebugEnabled>false</GradleScriptDebugEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="QuantityMeasurementTest.toChecktheEqualValueTrue" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="QuantityMeasurementTest.givenTypeCheckOfFeet_shouldReturnEqualOperatorTrue" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
         <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="--tests &quot;QuantityMeasurementTest.toChecktheEqualValueTrue&quot;" />
+        <option name="scriptParameters" value="--tests &quot;QuantityMeasurementTest.givenTypeCheckOfFeet_shouldReturnEqualOperatorTrue&quot;" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":cleanTest" />
+            <option value=":test" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <GradleScriptDebugEnabled>false</GradleScriptDebugEnabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="QuantityMeasurementTest.givenValueCheckOfFeet_shouldReturnEqualOperatorTrue" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="--tests &quot;QuantityMeasurementTest.givenValueCheckOfFeet_shouldReturnEqualOperatorTrue&quot;" />
         <option name="taskDescriptions">
           <list />
         </option>
@@ -175,11 +176,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Gradle.QuantityMeasurementTest.givenValueCheckOfFeet_shouldReturnEqualOperatorTrue" />
+        <item itemvalue="Gradle.QuantityMeasurementTest.givenTypeCheckOfFeet_shouldReturnEqualOperatorTrue" />
         <item itemvalue="Gradle.QuantityMeasurementTest.givenSameReferenceOfFeet_shouldReturnEqualOperatorTrue" />
         <item itemvalue="Gradle.QuantityMeasurementTest.givenSameReferenceOfFeet_shouldReturnEqualTrue" />
         <item itemvalue="Gradle.QuantityMeasurementTest.givenSameReferenceOfFeet_shouldReturnEqual" />
-        <item itemvalue="Gradle.QuantityMeasurementTest.givenNullMesure_shouldReturnException" />
-        <item itemvalue="Gradle.QuantityMeasurementTest.toChecktheEqualValueTrue" />
       </list>
     </recent_temporary>
   </component>

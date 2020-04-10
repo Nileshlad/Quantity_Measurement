@@ -49,4 +49,20 @@ public class QuantityMeasurementTest {
 
     }
 
+    //TEST CASE 1.6 VALUE CHECK EQUALITY AND EQUAL OPERATOR
+    @Test
+    public void givenValueCheckOfFeet_shouldReturnEqualOperatorUseTrue()  {
+        QuantityMeasurement qualityMeasurement1 = new QuantityMeasurement(11);
+        QuantityMeasurement qualityMeasurement2 = new QuantityMeasurement(11);
+        Assert.assertTrue(qualityMeasurement1.equals(qualityMeasurement2));
+        }
+
+    //TEST CASE 1.7 VALUE CHECK EQUALITY AND EQUAL OPERATOR
+    @Test
+    public void givenValueCheckOfFeet_shouldReturnEqualOperatorUseFalse()  {
+        QuantityMeasurement qualityMeasurement1 = new QuantityMeasurement(11);
+        QuantityMeasurement qualityMeasurement2 = new QuantityMeasurement(11);
+        Assert.assertFalse(qualityMeasurement1==qualityMeasurement2);
+    }
+
 }
