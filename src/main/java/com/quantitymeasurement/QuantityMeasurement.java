@@ -1,5 +1,7 @@
 package com.quantitymeasurement;
 
+import com.exception.QuantityMeasurementException;
+
 import java.util.Objects;
 
 public class QuantityMeasurement {
@@ -7,8 +9,18 @@ public class QuantityMeasurement {
     //variable
     double feetValue;
 
+    //constructor
     public QuantityMeasurement(double feetValue) {
-        this.feetValue = feetValue;
+       this.feetValue = feetValue;
+    }
+
+    //constructor method to exception
+    public QuantityMeasurement(Double aDouble) throws QuantityMeasurementException {
+        try {
+            this.feetValue=feetValue;
+        } catch (NullPointerException n){
+            throw new QuantityMeasurementException(n.getMessage(),QuantityMeasurementException.Type.Null_check);
+        }
     }
 
     @Override
