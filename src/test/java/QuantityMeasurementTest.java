@@ -125,4 +125,11 @@ public class QuantityMeasurementTest {
         Assert.assertTrue(inch.equals(inch));
     }
 
+    //TEST CASE 1.14 REF CHECK TO EQUAL OPERATOR
+    @Test
+    public void givenSameReferenceObjectOfInch_shouldReturnEqualTrue(){
+        Inch inch = new Inch(0);
+        Assert.assertTrue(inch==inch);
+    }
+
 }
