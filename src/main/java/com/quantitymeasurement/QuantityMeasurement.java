@@ -9,7 +9,7 @@ public class QuantityMeasurement {
     //variable
     double feetValue;
 
-    //constructor
+    //constructor of feet
     public QuantityMeasurement(double feetValue) {
         this.feetValue = feetValue;
     }
@@ -35,6 +35,7 @@ public class QuantityMeasurement {
     public int hashCode() {
         return Objects.hash(feetValue);
     }
+
 
     public static void main(String[] args) {
     }

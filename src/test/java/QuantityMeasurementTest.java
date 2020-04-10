@@ -1,3 +1,4 @@
+import com.Inch;
 import com.exception.QuantityMeasurementException;
 import com.quantitymeasurement.QuantityMeasurement;
 import org.junit.Assert;
@@ -66,4 +67,14 @@ public class QuantityMeasurementTest {
         Assert.assertFalse(qualityMeasurement1 == qualityMeasurement2);
     }
 
+    //TEST CASE IN INCHES
+    //TEST CASE 1.8 EQUAL METHOD
+    @Test
+    public void toCheckInchValuetheEqualValueTrue() throws QuantityMeasurementException {
+        Inch inch = new Inch(0);
+        Inch inch1 = new Inch(0);
+        boolean areEqual = inch.equals(inch1);
+        Assert.assertEquals(true, areEqual);
+
+    }
 }
