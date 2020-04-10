@@ -86,4 +86,36 @@ public class QuantityMeasurementTest {
         boolean areEqual = (inch == inch1);
         Assert.assertEquals(false, areEqual);
     }
+
+    //TEST CASE 1.10 NULL CHECK AND EQUAL METHOD
+    @Test
+    public void givenNullMeasure_shouldReturnExceptionTrue() {
+        try {
+            Inch inch = new Inch(null);
+            Inch inch1 = new Inch(null);
+        } catch (QuantityMeasurementException e) {
+            Assert.assertEquals(QuantityMeasurementException.Type.Null_check, e.type);
+        }
+    }
+
+    //TEST CASE 1.11 NULL CHECK EXCEPTION AND EQUAL OPERATOR
+    @Test
+    public void givenNullMeasureValue_shouldReturnExceptionTrue()throws QuantityMeasurementException {
+        Inch inch = new Inch(null);
+        Inch inch1 = new Inch(0);
+        boolean areEqual = inch.equals(inch1);
+        Assert.assertEquals(true, areEqual);
+
+    }
+
+    //TEST CASE 1.12 NULL CHECK EXCEPTION AND EQUAL OPERATOR
+    @Test
+    public void givenNullValue_shouldReturnExceptionTrue()throws QuantityMeasurementException {
+        Inch inch = new Inch(null);
+        Inch inch1 = new Inch(null);
+        boolean areEqual = inch.equals(inch1);
+        Assert.assertEquals(true, areEqual);
+
+    }
+
 }
