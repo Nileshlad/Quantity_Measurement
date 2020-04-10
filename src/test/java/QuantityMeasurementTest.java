@@ -100,7 +100,7 @@ public class QuantityMeasurementTest {
 
     //TEST CASE 1.11 NULL CHECK EXCEPTION AND EQUAL OPERATOR
     @Test
-    public void givenNullMeasureValue_shouldReturnExceptionTrue()throws QuantityMeasurementException {
+    public void givenNullMeasureValue_shouldReturnExceptionTrue() throws QuantityMeasurementException {
         Inch inch = new Inch(null);
         Inch inch1 = new Inch(0);
         boolean areEqual = inch.equals(inch1);
@@ -110,7 +110,7 @@ public class QuantityMeasurementTest {
 
     //TEST CASE 1.12 NULL CHECK EXCEPTION AND EQUAL OPERATOR
     @Test
-    public void givenNullValue_shouldReturnExceptionTrue()throws QuantityMeasurementException {
+    public void givenNullValue_shouldReturnExceptionTrue() throws QuantityMeasurementException {
         Inch inch = new Inch(null);
         Inch inch1 = new Inch(null);
         boolean areEqual = inch.equals(inch1);
@@ -120,24 +120,32 @@ public class QuantityMeasurementTest {
 
     //TEST CASE 1.13 REF CHECK TO EQUAL METHOD
     @Test
-    public void givenSameReferenceOfInch_shouldReturnEqualTrue(){
+    public void givenSameReferenceOfInch_shouldReturnEqualTrue() {
         Inch inch = new Inch(0);
         Assert.assertTrue(inch.equals(inch));
     }
 
     //TEST CASE 1.14 REF CHECK TO EQUAL OPERATOR
     @Test
-    public void givenSameReferenceObjectOfInch_shouldReturnEqualTrue(){
+    public void givenSameReferenceObjectOfInch_shouldReturnEqualTrue() {
         Inch inch = new Inch(0);
-        Assert.assertTrue(inch==inch);
+        Assert.assertTrue(inch == inch);
     }
 
     //TEST CASE 1.15 VALUE CHECK EQUALITY AND EQUAL METHOD
     @Test
-    public void givenValueCheckOfInches_shouldReturnEqualOperatorUseTrue() {
+    public void givenValueCheckOfInches_shouldReturnEqualMethodUseTrue() {
         Inch inch = new Inch(11);
         Inch inch1 = new Inch(11);
         Assert.assertTrue(inch.equals(inch1));
+    }
+
+    //TEST CASE 1.16 VALUE CHECK EQUALITY AND EQUAL METHOD
+    @Test
+    public void givenValueCheckOfInches_shouldReturnEqualOperatorUsefalse() {
+        Inch inch = new Inch(11);
+        Inch inch1 = new Inch(11);
+        Assert.assertFalse(inch == inch1);
     }
 
 }
