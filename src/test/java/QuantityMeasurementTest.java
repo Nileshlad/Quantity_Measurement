@@ -40,4 +40,13 @@ public class QuantityMeasurementTest {
         Assert.assertTrue(qualityMeasurement.equals(qualityMeasurement));
 
     }
+
+    //TEST CASE 1.5 REF CHECK TO EQUAL OPERATOR
+    @Test
+    public void givenSameReferenceOfFeet_shouldReturnEqualOperatorTrue() throws QuantityMeasurementException {
+        QuantityMeasurement qualityMeasurement = new QuantityMeasurement(0.0);
+        Assert.assertTrue(qualityMeasurement==qualityMeasurement);
+
+    }
+
 }
