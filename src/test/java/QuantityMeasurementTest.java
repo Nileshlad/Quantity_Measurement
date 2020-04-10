@@ -132,4 +132,12 @@ public class QuantityMeasurementTest {
         Assert.assertTrue(inch==inch);
     }
 
+    //TEST CASE 1.15 VALUE CHECK EQUALITY AND EQUAL METHOD
+    @Test
+    public void givenValueCheckOfInches_shouldReturnEqualOperatorUseTrue() {
+        Inch inch = new Inch(11);
+        Inch inch1 = new Inch(11);
+        Assert.assertTrue(inch.equals(inch1));
+    }
+
 }
