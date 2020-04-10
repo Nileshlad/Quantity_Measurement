@@ -118,4 +118,11 @@ public class QuantityMeasurementTest {
 
     }
 
+    //TEST CASE 1.13 REF CHECK TO EQUAL METHOD
+    @Test
+    public void givenSameReferenceOfInch_shouldReturnEqualTrue(){
+        Inch inch = new Inch(0);
+        Assert.assertTrue(inch.equals(inch));
+    }
+
 }
