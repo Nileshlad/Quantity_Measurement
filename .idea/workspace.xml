@@ -86,26 +86,6 @@
     </option>
   </component>
   <component name="RunManager" selected="Gradle.QuantityMeasurementTest.toCheckInchValuetheEqualValueTrue">
-    <configuration name="QuantityMeasurementTest.givenSameReferenceOfFeet_shouldReturnEqualOperatorTrue" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="--tests &quot;QuantityMeasurementTest.givenSameReferenceOfFeet_shouldReturnEqualOperatorTrue&quot;" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value=":cleanTest" />
-            <option value=":test" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <GradleScriptDebugEnabled>false</GradleScriptDebugEnabled>
-      <method v="2" />
-    </configuration>
     <configuration name="QuantityMeasurementTest.givenTypeCheckOfFeet_shouldReturnEqualOperatorTrue" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -186,13 +166,33 @@
       <GradleScriptDebugEnabled>false</GradleScriptDebugEnabled>
       <method v="2" />
     </configuration>
+    <configuration name="QuantityMeasurementTest.toChecktheEqualValueTruee" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="--tests &quot;QuantityMeasurementTest.toChecktheEqualValueTruee&quot;" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":cleanTest" />
+            <option value=":test" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <GradleScriptDebugEnabled>false</GradleScriptDebugEnabled>
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
         <item itemvalue="Gradle.QuantityMeasurementTest.toCheckInchValuetheEqualValueTrue" />
+        <item itemvalue="Gradle.QuantityMeasurementTest.toChecktheEqualValueTruee" />
         <item itemvalue="Gradle.QuantityMeasurementTest.givenValueCheckOfFeet_shouldReturnEqualOperatorUseFalse" />
         <item itemvalue="Gradle.QuantityMeasurementTest.givenValueCheckOfFeet_shouldReturnEqualOperatorTrue" />
         <item itemvalue="Gradle.QuantityMeasurementTest.givenTypeCheckOfFeet_shouldReturnEqualOperatorTrue" />
-        <item itemvalue="Gradle.QuantityMeasurementTest.givenSameReferenceOfFeet_shouldReturnEqualOperatorTrue" />
       </list>
     </recent_temporary>
   </component>

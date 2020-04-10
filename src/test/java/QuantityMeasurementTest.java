@@ -70,11 +70,20 @@ public class QuantityMeasurementTest {
     //TEST CASE IN INCHES
     //TEST CASE 1.8 EQUAL METHOD
     @Test
-    public void toCheckInchValuetheEqualValueTrue() throws QuantityMeasurementException {
+    public void toCheckInchValuetheEqualValueTrue() {
         Inch inch = new Inch(0);
         Inch inch1 = new Inch(0);
         boolean areEqual = inch.equals(inch1);
         Assert.assertEquals(true, areEqual);
 
+    }
+
+    //TEST CASE 1.9 EQUAL OPERATOR
+    @Test
+    public void toGivenInchesValueCheckNotEqualValueFalse() {
+        Inch inch = new Inch(0);
+        Inch inch1 = new Inch(0);
+        boolean areEqual = (inch == inch1);
+        Assert.assertEquals(false, areEqual);
     }
 }
