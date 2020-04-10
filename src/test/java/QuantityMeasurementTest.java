@@ -33,4 +33,11 @@ public class QuantityMeasurementTest {
         }
     }
 
+    //TEST CASE 1.4 REF CHECK TO EQUAL METHOD
+    @Test
+    public void givenSameReferenceOfFeet_shouldReturnEqualTrue() throws QuantityMeasurementException {
+        QuantityMeasurement qualityMeasurement = new QuantityMeasurement(0.0);
+        Assert.assertTrue(qualityMeasurement.equals(qualityMeasurement));
+
+    }
 }
