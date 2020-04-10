@@ -45,24 +45,25 @@ public class QuantityMeasurementTest {
     @Test
     public void givenSameReferenceOfFeet_shouldReturnEqualOperatorTrue() throws QuantityMeasurementException {
         QuantityMeasurement qualityMeasurement = new QuantityMeasurement(0.0);
-        Assert.assertTrue(qualityMeasurement==qualityMeasurement);
+        Assert.assertTrue(qualityMeasurement == qualityMeasurement);
 
     }
 
-    //TEST CASE 1.6 VALUE CHECK EQUALITY AND EQUAL OPERATOR
+    //TEST CASE 1.6 VALUE CHECK EQUALITY AND EQUAL METHOD
+
     @Test
-    public void givenValueCheckOfFeet_shouldReturnEqualOperatorUseTrue()  {
+    public void givenValueCheckOfFeet_shouldReturnEqualOperatorUseTrue() {
         QuantityMeasurement qualityMeasurement1 = new QuantityMeasurement(11);
         QuantityMeasurement qualityMeasurement2 = new QuantityMeasurement(11);
         Assert.assertTrue(qualityMeasurement1.equals(qualityMeasurement2));
-        }
+    }
 
     //TEST CASE 1.7 VALUE CHECK EQUALITY AND EQUAL OPERATOR
     @Test
-    public void givenValueCheckOfFeet_shouldReturnEqualOperatorUseFalse()  {
+    public void givenValueCheckOfFeet_shouldReturnEqualOperatorUseFalse() {
         QuantityMeasurement qualityMeasurement1 = new QuantityMeasurement(11);
         QuantityMeasurement qualityMeasurement2 = new QuantityMeasurement(11);
-        Assert.assertFalse(qualityMeasurement1==qualityMeasurement2);
+        Assert.assertFalse(qualityMeasurement1 == qualityMeasurement2);
     }
 
 }
