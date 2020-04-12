@@ -1,7 +1,6 @@
 package com.quantitymeasurement;
 
 public enum Unit {
-
     FEET {
         @Override
         public double convertor(double value) {
@@ -12,6 +11,12 @@ public enum Unit {
         @Override
         public double convertor(double value) {
             return value;
+        }
+    },
+    YARD {
+        @Override
+        public double convertor(double value) {
+            return value * 36;
         }
     };
 

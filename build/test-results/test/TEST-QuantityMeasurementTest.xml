@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="QuantityMeasurementTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2020-04-12T23:04:36" hostname="blackhawkkk" time="0.007">
+<testsuite name="QuantityMeasurementTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2020-04-12T23:12:29" hostname="blackhawkkk" time="0.006">
   <properties/>
-  <testcase name="given12InchAnd1Feet_shouldReturnEqual" classname="QuantityMeasurementTest" time="0.007"/>
+  <testcase name="given3FeetAnd1Yard_shouldReturnEqual" classname="QuantityMeasurementTest" time="0.006"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>
