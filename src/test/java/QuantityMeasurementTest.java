@@ -89,9 +89,25 @@ public class QuantityMeasurementTest {
 
     //TEST CASE 1.13
     @Test
-    public void givenOneInchAndOneFeet_shouldReturnNotEquals() throws QuantityMeasurementException {
+    public void givenOneInchAndOneFeet_shouldReturnNotEquals(){
         LengthMesurement inch = new LengthMesurement(Unit.INCH, 1);
         LengthMesurement feet = new LengthMesurement(Unit.FEET, 1);
         Assert.assertNotEquals(inch, feet);
+    }
+
+    //TEST CASE 1.14 ONE FEET AND 12 INCH EQUAL
+    @Test
+    public void given1FeetAnd12Inch_shouldReturnEqual() {
+        LengthMesurement feet = new LengthMesurement(Unit.FEET, 1);
+        LengthMesurement inch = new LengthMesurement(Unit.INCH, 12);
+        Assert.assertEquals(feet,inch);
+    }
+
+    //TEST CASE 1.15 ONE INCH AND 12 INCH
+    @Test
+    public void given12InchAnd1Feet_shouldReturnEqual() {
+        LengthMesurement feet = new LengthMesurement(Unit.FEET, 1);
+        LengthMesurement inch = new LengthMesurement(Unit.INCH, 12);
+        Assert.assertEquals(inch, feet);
     }
 }
