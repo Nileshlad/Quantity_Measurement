@@ -1,151 +1,91 @@
-import com.Inch;
 import com.exception.QuantityMeasurementException;
-import com.quantitymeasurement.QuantityMeasurement;
+import com.quantitymeasurement.LengthMesurement;
 import org.junit.Assert;
 import org.junit.Test;
 
 public class QuantityMeasurementTest {
     //TEST CASE 1.1 EQUAL METHOD
     @Test
-    public void toChecktheEqualValueTrue() throws QuantityMeasurementException {
-        QuantityMeasurement qualityMeasurement = new QuantityMeasurement(0);
-        QuantityMeasurement qualityMeasurement1 = new QuantityMeasurement(0);
-        boolean areEqual = qualityMeasurement.equals(qualityMeasurement1);
-        Assert.assertEquals(true, areEqual);
+    public void givenZeroFeetAndZeroFeet_shouldReturnEqualTrue() throws QuantityMeasurementException {
+        LengthMesurement first = new LengthMesurement(LengthMesurement.Unit.FEET, 0.0);
+        LengthMesurement second = new LengthMesurement(LengthMesurement.Unit.FEET, 0.0);
+        Assert.assertEquals(first, second);
     }
 
-    //TEST CASE 1.2 EQUAL OPERATOR
+    //TEST CASE 1.2
     @Test
-    public void toChecktheNotEqualValueFalse() throws QuantityMeasurementException {
-        QuantityMeasurement qualityMeasurement = new QuantityMeasurement(0);
-        QuantityMeasurement qualityMeasurement1 = new QuantityMeasurement(0);
-        boolean areEqual = (qualityMeasurement == qualityMeasurement1);
-        Assert.assertEquals(false, areEqual);
+    public void givenZeroFeetAndZeroFeet_shouldReturnEqualfalse() throws QuantityMeasurementException {
+        LengthMesurement first = new LengthMesurement(LengthMesurement.Unit.FEET, 0.0);
+        LengthMesurement second = new LengthMesurement(LengthMesurement.Unit.FEET, 0.1);
+        boolean lengthEql = first.equals(second);
+        Assert.assertEquals(false, lengthEql);
     }
 
     //TEST CASE 1.3 NULL CHECK
     @Test
-    public void givenNullMeasure_shouldReturnException() {
+    public void givenSameTypeSameValueInFeet_shouldReturnException() {
         try {
-            QuantityMeasurement qualityMeasurement = new QuantityMeasurement(null);
-            QuantityMeasurement qualityMeasurement1 = new QuantityMeasurement(null);
+            LengthMesurement first = new LengthMesurement(LengthMesurement.Unit.FEET, 1);
+            LengthMesurement second = new LengthMesurement(LengthMesurement.Unit.FEET, 1);
         } catch (QuantityMeasurementException e) {
             Assert.assertEquals(QuantityMeasurementException.Type.Null_check, e.type);
         }
     }
 
-    //TEST CASE 1.4 REF CHECK TO EQUAL METHOD
+    //TEST CASE 1.9
+    @Test
+    public void givenSameTypeSameValueInFeet_shouldReturnExceptionTrue()throws QuantityMeasurementException {
+        LengthMesurement first = new LengthMesurement(LengthMesurement.Unit.FEET, 1);
+        LengthMesurement second = new LengthMesurement(LengthMesurement.Unit.FEET, 1);
+    }
+
+    //TEST CASE 1.5 REF CHECK
     @Test
     public void givenSameReferenceOfFeet_shouldReturnEqualTrue() throws QuantityMeasurementException {
-        QuantityMeasurement qualityMeasurement = new QuantityMeasurement(0.0);
-        Assert.assertTrue(qualityMeasurement.equals(qualityMeasurement));
-
+        LengthMesurement first = new LengthMesurement(LengthMesurement.Unit.FEET, 0.0);
+        Assert.assertTrue(first.equals(first));
     }
 
-    //TEST CASE 1.5 REF CHECK TO EQUAL OPERATOR
+    //INCHES TEST CASE
+    //TEST CASE 1.6
     @Test
-    public void givenSameReferenceOfFeet_shouldReturnEqualOperatorTrue() throws QuantityMeasurementException {
-        QuantityMeasurement qualityMeasurement = new QuantityMeasurement(0.0);
-        Assert.assertTrue(qualityMeasurement == qualityMeasurement);
-
+    public void givenZeroInchAndZeroInch_shouldReturnEqualTrue() throws QuantityMeasurementException {
+        LengthMesurement first = new LengthMesurement(LengthMesurement.Unit.INCH, 0.0);
+        LengthMesurement second = new LengthMesurement(LengthMesurement.Unit.INCH, 0.0);
+        Assert.assertEquals(first, second);
     }
 
-    //TEST CASE 1.6 VALUE CHECK EQUALITY AND EQUAL METHOD
-
+    //TEST CASE 1.7
     @Test
-    public void givenValueCheckOfFeet_shouldReturnEqualOperatorUseTrue() {
-        QuantityMeasurement qualityMeasurement1 = new QuantityMeasurement(11);
-        QuantityMeasurement qualityMeasurement2 = new QuantityMeasurement(11);
-        Assert.assertTrue(qualityMeasurement1.equals(qualityMeasurement2));
+    public void givenZeroInchAndZeroInch_shouldReturnEqualfalse() throws QuantityMeasurementException {
+        LengthMesurement first = new LengthMesurement(LengthMesurement.Unit.INCH, 0.0);
+        LengthMesurement second = new LengthMesurement(LengthMesurement.Unit.INCH, 0.1);
+        boolean lengthEql = first.equals(second);
+        Assert.assertEquals(false, lengthEql);
     }
 
-    //TEST CASE 1.7 VALUE CHECK EQUALITY AND EQUAL OPERATOR
+    //TEST CASE 1.8 NULL CHECK
     @Test
-    public void givenValueCheckOfFeet_shouldReturnEqualOperatorUseFalse() {
-        QuantityMeasurement qualityMeasurement1 = new QuantityMeasurement(11);
-        QuantityMeasurement qualityMeasurement2 = new QuantityMeasurement(11);
-        Assert.assertFalse(qualityMeasurement1 == qualityMeasurement2);
-    }
-
-    //TEST CASE IN INCHES
-    //TEST CASE 1.8 EQUAL METHOD
-    @Test
-    public void toCheckInchValuetheEqualValueTrue() {
-        Inch inch = new Inch(0);
-        Inch inch1 = new Inch(0);
-        boolean areEqual = inch.equals(inch1);
-        Assert.assertEquals(true, areEqual);
-
-    }
-
-    //TEST CASE 1.9 EQUAL OPERATOR
-    @Test
-    public void toGivenInchesValueCheckNotEqualValueFalse() {
-        Inch inch = new Inch(0);
-        Inch inch1 = new Inch(0);
-        boolean areEqual = (inch == inch1);
-        Assert.assertEquals(false, areEqual);
-    }
-
-    //TEST CASE 1.10 NULL CHECK AND EQUAL METHOD
-    @Test
-    public void givenNullMeasure_shouldReturnExceptionTrue() {
+    public void givenSameTypeSameValueInInch_shouldReturnException() {
         try {
-            Inch inch = new Inch(null);
-            Inch inch1 = new Inch(null);
+            LengthMesurement first = new LengthMesurement(LengthMesurement.Unit.INCH, 1);
+            LengthMesurement second = new LengthMesurement(LengthMesurement.Unit.INCH, 1);
         } catch (QuantityMeasurementException e) {
             Assert.assertEquals(QuantityMeasurementException.Type.Null_check, e.type);
         }
     }
 
-    //TEST CASE 1.11 NULL CHECK EXCEPTION AND EQUAL OPERATOR
-    @Test
-    public void givenNullMeasureValue_shouldReturnExceptionTrue() throws QuantityMeasurementException {
-        Inch inch = new Inch(null);
-        Inch inch1 = new Inch(0);
-        boolean areEqual = inch.equals(inch1);
-        Assert.assertEquals(true, areEqual);
-
+    //TEST CASE 1.9
+   @Test
+    public void givenSameTypeSameValueInInch_shouldReturnExceptionTrue()throws QuantityMeasurementException {
+        LengthMesurement first = new LengthMesurement(LengthMesurement.Unit.INCH, 1);
+        LengthMesurement second = new LengthMesurement(LengthMesurement.Unit.INCH, 1);
     }
 
-    //TEST CASE 1.12 NULL CHECK EXCEPTION AND EQUAL OPERATOR
+    //TEST CASE 1.10 REF CHECK
     @Test
-    public void givenNullValue_shouldReturnExceptionTrue() throws QuantityMeasurementException {
-        Inch inch = new Inch(null);
-        Inch inch1 = new Inch(null);
-        boolean areEqual = inch.equals(inch1);
-        Assert.assertEquals(true, areEqual);
-
+    public void givenSameReferenceOfInch_shouldReturnEqualTrue() throws QuantityMeasurementException {
+        LengthMesurement first = new LengthMesurement(LengthMesurement.Unit.FEET, 0.0);
+        Assert.assertTrue(first.equals(first));
     }
-
-    //TEST CASE 1.13 REF CHECK TO EQUAL METHOD
-    @Test
-    public void givenSameReferenceOfInch_shouldReturnEqualTrue() {
-        Inch inch = new Inch(0);
-        Assert.assertTrue(inch.equals(inch));
-    }
-
-    //TEST CASE 1.14 REF CHECK TO EQUAL OPERATOR
-    @Test
-    public void givenSameReferenceObjectOfInch_shouldReturnEqualTrue() {
-        Inch inch = new Inch(0);
-        Assert.assertTrue(inch == inch);
-    }
-
-    //TEST CASE 1.15 VALUE CHECK EQUALITY AND EQUAL METHOD
-    @Test
-    public void givenValueCheckOfInches_shouldReturnEqualMethodUseTrue() {
-        Inch inch = new Inch(11);
-        Inch inch1 = new Inch(11);
-        Assert.assertTrue(inch.equals(inch1));
-    }
-
-    //TEST CASE 1.16 VALUE CHECK EQUALITY AND EQUAL METHOD
-    @Test
-    public void givenValueCheckOfInches_shouldReturnEqualOperatorUsefalse() {
-        Inch inch = new Inch(11);
-        Inch inch1 = new Inch(11);
-        Assert.assertFalse(inch == inch1);
-    }
-
 }
