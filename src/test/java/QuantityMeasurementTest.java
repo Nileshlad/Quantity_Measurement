@@ -118,4 +118,12 @@ public class QuantityMeasurementTest {
         LengthMesurement yard = new LengthMesurement(Unit.YARD, 1);
         Assert.assertEquals(feet, yard);
     }
+
+    //TEST CASE 1.17 1 FEET AND 1 YARD
+    @Test
+    public void given1FeetAnd1Yard_shouldReturnNotEqual() {
+        LengthMesurement feet = new LengthMesurement(Unit.FEET, 1);
+        LengthMesurement yard = new LengthMesurement(Unit.YARD, 1);
+        Assert.assertNotEquals(feet, yard);
+    }
 }
