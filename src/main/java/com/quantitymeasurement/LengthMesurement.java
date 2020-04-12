@@ -2,12 +2,11 @@ package com.quantitymeasurement;
 
 import com.exception.QuantityMeasurementException;
 
-import java.util.Objects;
-
 public class LengthMesurement {
-    public enum Unit{
-        FEET,INCH
+    public enum Unit {
+        FEET, INCH
     }
+
     Unit unit;
     double measure;
 
@@ -15,8 +14,8 @@ public class LengthMesurement {
         try {
             this.unit = unit;
             this.measure = measure;
-        }catch (NullPointerException n){
-            throw new QuantityMeasurementException(n.getMessage(),QuantityMeasurementException.Type.Null_check);
+        } catch (NullPointerException n) {
+            throw new QuantityMeasurementException(n.getMessage(), QuantityMeasurementException.Type.Null_check);
         }
     }
 
@@ -25,7 +24,9 @@ public class LengthMesurement {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         LengthMesurement that = (LengthMesurement) o;
-        return unit == that.unit &&
-                Objects.equals(measure, that.measure);
+        if (measure == 0 && that.measure == 0)
+            return true;
+        return Double.compare(that.measure, measure) == 0 &&
+                this.unit == that.unit;
     }
 }

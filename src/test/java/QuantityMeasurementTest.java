@@ -80,12 +80,22 @@ public class QuantityMeasurementTest {
     public void givenSameTypeSameValueInInch_shouldReturnExceptionTrue()throws QuantityMeasurementException {
         LengthMesurement first = new LengthMesurement(LengthMesurement.Unit.INCH, 1);
         LengthMesurement second = new LengthMesurement(LengthMesurement.Unit.INCH, 1);
-    }
+       Assert.assertEquals(first, second);
+
+   }
 
     //TEST CASE 1.10 REF CHECK
     @Test
     public void givenSameReferenceOfInch_shouldReturnEqualTrue() throws QuantityMeasurementException {
         LengthMesurement first = new LengthMesurement(LengthMesurement.Unit.FEET, 0.0);
         Assert.assertTrue(first.equals(first));
+    }
+
+    //TEST CASE 1.11 CHECK FEET AND INCH EQUAL
+    @Test
+    public void givenZeroFeetAndZeroInch_shouldReturnEquals() throws QuantityMeasurementException {
+        LengthMesurement first = new LengthMesurement(LengthMesurement.Unit.INCH, 0);
+        LengthMesurement second = new LengthMesurement(LengthMesurement.Unit.FEET, 0);
+        Assert.assertEquals(first, second);
     }
 }
