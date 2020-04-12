@@ -98,4 +98,12 @@ public class QuantityMeasurementTest {
         LengthMesurement second = new LengthMesurement(LengthMesurement.Unit.FEET, 0);
         Assert.assertEquals(first, second);
     }
+
+    //TEST CASE 1.12 CHECK FEET AND INCH EQUAL
+    @Test
+    public void givenOneFeetAndOneInch_shouldReturnNotEquals() throws QuantityMeasurementException {
+        LengthMesurement first = new LengthMesurement(LengthMesurement.Unit.INCH, 1);
+        LengthMesurement second = new LengthMesurement(LengthMesurement.Unit.FEET, 1);
+        Assert.assertNotEquals(first, second);
+    }
 }
