@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="QuantityMeasurementTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2020-04-13T00:24:46" hostname="blackhawkkk" time="0.014">
+<testsuite name="QuantityMeasurementTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2020-04-13T02:18:20" hostname="blackhawkkk" time="0.007">
   <properties/>
-  <testcase name="given2InchAnd5Centimeter_shouldReturnEqual" classname="QuantityMeasurementTest" time="0.014"/>
-  <system-out><![CDATA[2.0   2.0
-]]></system-out>
+  <testcase name="given1TonAnd1000Kgs_shouldReturnEqual" classname="QuantityMeasurementTest" time="0.007"/>
+  <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

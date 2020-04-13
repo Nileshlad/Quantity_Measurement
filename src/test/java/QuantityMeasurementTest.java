@@ -214,4 +214,12 @@ public class QuantityMeasurementTest {
         QuantityMeasurement grams = new QuantityMeasurement(Unit.GRAMS, 1000);
         Assert.assertEquals(kg, grams);
     }
+
+    //TEST CASE 1.28 1000KGS TO 1 TON
+    @Test
+    public void given1TonAnd1000Kgs_shouldReturnEqual(){
+        QuantityMeasurement kg= new QuantityMeasurement(Unit.TON, 1);
+        QuantityMeasurement grams = new QuantityMeasurement(Unit.KG, 1000);
+        Assert.assertEquals(kg, grams);
+    }
 }

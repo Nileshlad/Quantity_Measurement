@@ -9,7 +9,9 @@ public enum Unit {
     GALLON(UnitType.LIQUID_WEIGHT, 3780),
     ML(UnitType.LIQUID_WEIGHT, 0.001),
     KG(UnitType.SOLID_WEIGHT,1),
-    GRAMS(UnitType.SOLID_WEIGHT,0.001);
+    GRAMS(UnitType.SOLID_WEIGHT,0.001),
+    TON(UnitType.SOLID_WEIGHT,1000);
+    ;
 
     public double unitValue;
     public UnitType unitType;
