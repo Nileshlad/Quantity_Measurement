@@ -146,9 +146,9 @@ public class QuantityMeasurementTest {
     //TEST CASE 1.20
     @Test
     public void given2InchAnd5Centimeter_shouldReturnEqual() {
-        QuantityMeasurement inch=new QuantityMeasurement(Unit.INCH,2);
-        QuantityMeasurement cm=new QuantityMeasurement(Unit.CM,5);
-        Assert.assertEquals(inch,cm);
+        QuantityMeasurement inch = new QuantityMeasurement(Unit.INCH, 2);
+        QuantityMeasurement cm = new QuantityMeasurement(Unit.CM, 5);
+        Assert.assertEquals(inch, cm);
     }
 
     //USE CASE 4
@@ -204,5 +204,14 @@ public class QuantityMeasurementTest {
         QuantityMeasurement second = new QuantityMeasurement(Unit.ML, 1000);
         double totalValue = first.getAddition(second);
         Assert.assertEquals(2, totalValue, 0);
+    }
+
+    //USE CASE 6
+    //TEST CASE 1.27 1KG TO 1000 GRAMS COMPARE
+    @Test
+    public void given1KGAnd1000Grams_shouldReturnEqual() {
+        QuantityMeasurement kg = new QuantityMeasurement(Unit.KG, 1);
+        QuantityMeasurement grams = new QuantityMeasurement(Unit.GRAMS, 1000);
+        Assert.assertEquals(kg, grams);
     }
 }
