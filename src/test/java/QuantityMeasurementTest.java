@@ -151,6 +151,7 @@ public class QuantityMeasurementTest {
         Assert.assertEquals(inch,cm);
     }
 
+    //USE CASE 4
     //TEST CASE 1.21 ADDITION OF TWO INCH
     @Test
     public void givenTwoLengthValue_shouldReturnAddition() {
@@ -188,4 +189,11 @@ public class QuantityMeasurementTest {
     }
 
     //use case 5
+    //TEST CASE 1.25 GALLON AND LITER COMPARE
+    @Test
+    public void given1GallonAnd3Liters780ml_shouldReturnEqual() {
+        QuantityMeasurement gallon = new QuantityMeasurement(Unit.GALLON, 1);
+        QuantityMeasurement liter = new QuantityMeasurement(Unit.LITER, 3.78);
+        Assert.assertEquals(gallon, liter);
+    }
 }
