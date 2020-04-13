@@ -9,13 +9,20 @@ public class QuantityMeasurement {
         this.measure = measure;
     }
 
+    public double convertor(QuantityMeasurement measurement) {
+
+        double unitValue = measurement.unit.getUnitValue();
+        return  Math.round(measurement.measure * unitValue);
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         QuantityMeasurement that = (QuantityMeasurement) o;
-        double value1 = this.unit.convertor(measure);
-        double value2 = that.unit.convertor(that.measure);
+        double value1 = convertor(this);
+        double value2 = convertor(that);
+        System.out.println(value1 +"   "+value2 );
         if (measure == 0 && that.measure == 0)
             return true;
         if (value1 == value2)

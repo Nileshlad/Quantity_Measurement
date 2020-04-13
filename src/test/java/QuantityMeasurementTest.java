@@ -143,4 +143,11 @@ public class QuantityMeasurementTest {
         Assert.assertEquals(yard, inch);
     }
 
+    //TEST CASE 1.20
+    @Test
+    public void given2InchAnd5Centimeter_shouldReturnEqual() {
+        QuantityMeasurement inch=new QuantityMeasurement(Unit.INCH,2);
+        QuantityMeasurement cm=new QuantityMeasurement(Unit.CM,5);
+        Assert.assertEquals(inch,cm);
+    }
 }
