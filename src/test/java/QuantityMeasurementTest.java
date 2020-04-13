@@ -151,7 +151,7 @@ public class QuantityMeasurementTest {
         Assert.assertEquals(inch,cm);
     }
 
-    //TEST CASE 1.21 ADDITION OF TWO CENTIMETER IN INCH
+    //TEST CASE 1.21 ADDITION OF TWO INCH
     @Test
     public void givenTwoLengthValue_shouldReturnAddition() {
         QuantityMeasurement first = new QuantityMeasurement(Unit.INCH, 2);
@@ -160,7 +160,7 @@ public class QuantityMeasurementTest {
         Assert.assertEquals(4, totalValue, 0);
     }
 
-    //TEST CASE 1.22  ADDITION OF TWO CENTIMETER IN FEET
+    //TEST CASE 1.22  ADDITION OF TWO  FEET
     @Test
     public void given1FeetAnd1Fet_shouldReturnAdditionInInch() {
         QuantityMeasurement first = new QuantityMeasurement(Unit.FEET, 1);
@@ -169,12 +169,21 @@ public class QuantityMeasurementTest {
         Assert.assertEquals(24, totalValue, 0);
     }
 
-    //TEST CASE 1.23 ADDITION OF INCH AND FEET
+    //TEST CASE 1.23 ADDITION OF 1 INCH AND CM
     @Test
     public void given2InchAndCentimeter_shouldReturnAdditionInInch() {
         QuantityMeasurement first = new QuantityMeasurement(Unit.INCH, 2);
         QuantityMeasurement second = new QuantityMeasurement(Unit.CM, 2.5);
         double totalValue = first.getAddition(second);
         Assert.assertEquals(3, totalValue, 0);
+    }
+
+    //TEST CASE 1.23 ADDITION 1 FEET AND 2 INCH
+    @Test
+    public void given1FeetAnd2Inch_shouldReturnAdditionInInch() {
+        QuantityMeasurement first = new QuantityMeasurement(Unit.FEET, 1);
+        QuantityMeasurement second = new QuantityMeasurement(Unit.INCH, 2);
+        double totalValue = first.getAddition(second);
+        Assert.assertEquals(14, totalValue, 0);
     }
 }
