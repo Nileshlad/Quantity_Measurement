@@ -30,4 +30,10 @@ public class QuantityMeasurement {
         return Double.compare(that.measure, measure) == 0 &&
                 this.unit == that.unit;
     }
+
+    public double getAddition(QuantityMeasurement second) {
+        double value1 = convertor(this);
+        double value2 = convertor(second);
+        return value1 + value2;
+    }
 }

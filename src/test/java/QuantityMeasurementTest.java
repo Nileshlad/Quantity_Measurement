@@ -150,4 +150,13 @@ public class QuantityMeasurementTest {
         QuantityMeasurement cm=new QuantityMeasurement(Unit.CM,5);
         Assert.assertEquals(inch,cm);
     }
+
+    //TEST CASE 1.21 ADDITION OF TWO CENTIMETER
+    @Test
+    public void givenTwoLengthValue_shouldReturnAddition() {
+        QuantityMeasurement first = new QuantityMeasurement(Unit.INCH, 2);
+        QuantityMeasurement second = new QuantityMeasurement(Unit.INCH, 2);
+        double totalValue = first.getAddition(second);
+        Assert.assertEquals(4, totalValue, 0);
+    }
 }
