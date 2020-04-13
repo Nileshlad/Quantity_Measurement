@@ -8,7 +8,7 @@ public class QuantityMeasurementTest {
     //FEET TEST CASES USE CASE 1
     //TEST CASE 1.1 EQUAL METHOD
     @Test
-    public void givenZeroFeetAndZeroFeet_shouldReturnEqualTrue() throws QuantityMeasurementException {
+    public void givenZeroFeetAndZeroFeet_shouldReturnEqualTrue() {
         QuantityMeasurement first = new QuantityMeasurement(Unit.FEET, 0.0);
         QuantityMeasurement second = new QuantityMeasurement(Unit.FEET, 0.0);
         Assert.assertEquals(first, second);
@@ -16,7 +16,7 @@ public class QuantityMeasurementTest {
 
     //TEST CASE 1.2
     @Test
-    public void givenZeroFeetAndZeroFeet_shouldReturnEqualfalse() throws QuantityMeasurementException {
+    public void givenZeroFeetAndZeroFeet_shouldReturnEqualfalse() {
         QuantityMeasurement first = new QuantityMeasurement(Unit.FEET, 0.0);
         QuantityMeasurement second = new QuantityMeasurement(Unit.FEET, 0.1);
         boolean lengthEql = first.equals(second);
@@ -25,7 +25,7 @@ public class QuantityMeasurementTest {
 
     //TEST CASE 1.4 NULL CHECK
     @Test
-    public void givenSameTypeSameValueInFeet_shouldReturnExceptionTrue() throws QuantityMeasurementException {
+    public void givenSameTypeSameValueInFeet_shouldReturnExceptionTrue() {
         QuantityMeasurement first = new QuantityMeasurement(Unit.FEET, 1);
         QuantityMeasurement second = new QuantityMeasurement(Unit.FEET, 1);
     }
@@ -40,7 +40,7 @@ public class QuantityMeasurementTest {
     //INCHES TEST CASE
     //TEST CASE 1.7
     @Test
-    public void givenZeroInchAndZeroInch_shouldReturnEqualTrue() throws QuantityMeasurementException {
+    public void givenZeroInchAndZeroInch_shouldReturnEqualTrue() {
         QuantityMeasurement first = new QuantityMeasurement(Unit.INCH, 1);
         QuantityMeasurement second = new QuantityMeasurement(Unit.FEET, 1);
         Assert.assertEquals(first, second);
@@ -48,7 +48,7 @@ public class QuantityMeasurementTest {
 
     //TEST CASE 1.8
     @Test
-    public void givenZeroInchAndZeroInch_shouldReturnEqualfalse() throws QuantityMeasurementException {
+    public void givenZeroInchAndZeroInch_shouldReturnEqualfalse() {
         QuantityMeasurement first = new QuantityMeasurement(Unit.INCH, 0.0);
         QuantityMeasurement second = new QuantityMeasurement(Unit.INCH, 0.1);
         boolean lengthEql = first.equals(second);
@@ -57,7 +57,7 @@ public class QuantityMeasurementTest {
 
     //TEST CASE 1.9
     @Test
-    public void givenSameTypeSameValueInInch_shouldReturnExceptionTrue() throws QuantityMeasurementException {
+    public void givenSameTypeSameValueInInch_shouldReturnExceptionTrue() {
         QuantityMeasurement first = new QuantityMeasurement(Unit.INCH, 1);
         QuantityMeasurement second = new QuantityMeasurement(Unit.INCH, 1);
         Assert.assertEquals(first, second);
@@ -66,7 +66,7 @@ public class QuantityMeasurementTest {
 
     //TEST CASE 1.10 REF CHECK
     @Test
-    public void givenSameReferenceOfInch_shouldReturnEqualTrue() throws QuantityMeasurementException {
+    public void givenSameReferenceOfInch_shouldReturnEqualTrue() {
         QuantityMeasurement first = new QuantityMeasurement(Unit.FEET, 0.0);
         Assert.assertTrue(first.equals(first));
     }
@@ -74,7 +74,7 @@ public class QuantityMeasurementTest {
     //FEET AND INCH TEST CASES
     //TEST CASE 1.11 CHECK FEET AND INCH EQUAL
     @Test
-    public void givenZeroFeetAndZeroInch_shouldReturnEquals() throws QuantityMeasurementException {
+    public void givenZeroFeetAndZeroInch_shouldReturnEquals() {
         QuantityMeasurement first = new QuantityMeasurement(Unit.INCH, 0);
         QuantityMeasurement second = new QuantityMeasurement(Unit.FEET, 0);
         Assert.assertEquals(first, second);
@@ -144,6 +144,7 @@ public class QuantityMeasurementTest {
         Assert.assertEquals(yard, inch);
     }
 
+    //USE CASE 2
     //TEST CASE 1.20
     @Test
     public void given2InchAnd5Centimeter_shouldReturnEqual() {
@@ -218,8 +219,8 @@ public class QuantityMeasurementTest {
 
     //TEST CASE 1.28 1000KGS TO 1 TON
     @Test
-    public void given1TonAnd1000Kgs_shouldReturnEqual(){
-        QuantityMeasurement kg= new QuantityMeasurement(Unit.TON, 1);
+    public void given1TonAnd1000Kgs_shouldReturnEqual() {
+        QuantityMeasurement kg = new QuantityMeasurement(Unit.TON, 1);
         QuantityMeasurement grams = new QuantityMeasurement(Unit.KG, 1000);
         Assert.assertEquals(kg, grams);
     }
@@ -227,12 +228,13 @@ public class QuantityMeasurementTest {
     //USE CASE 7
     //TEST CASE 1.29 1TON + 1000GRAM = 1001KG
     @Test
-    public void given1TonAnd1000Grams_shouldReturnAdditionInKG(){
-        QuantityMeasurement kg= new QuantityMeasurement(Unit.TON, 1);
+    public void given1TonAnd1000Grams_shouldReturnAdditionInKG() {
+        QuantityMeasurement kg = new QuantityMeasurement(Unit.TON, 1);
         QuantityMeasurement grams = new QuantityMeasurement(Unit.GRAMS, 1000);
         double addition = kg.getAddition(grams);
-        Assert.assertEquals(1001,addition,0);
+        Assert.assertEquals(1001, addition, 0);
     }
+
     //USE CASE 8
     //TEST CASE 1.30    TO 212 F = 100 C
     @Test

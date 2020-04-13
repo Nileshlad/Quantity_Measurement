@@ -1,6 +1,7 @@
 package com.quantitymeasurement;
 
 public enum Unit {
+    //all unit converter
     FEET(UnitType.LENGTH, 12),
     INCH(UnitType.LENGTH, 1),
     YARD(UnitType.LENGTH, 36),
