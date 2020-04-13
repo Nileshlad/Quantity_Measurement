@@ -6,7 +6,8 @@ public enum Unit {
     YARD(UnitType.LENGTH, 36),
     CM(UnitType.LENGTH, 1 / 2.54),
     LITER(UnitType.LIQUID_WEIGHT, 1000),
-    GALLON(UnitType.LIQUID_WEIGHT, 3780);
+    GALLON(UnitType.LIQUID_WEIGHT, 3780),
+    ML(UnitType.LIQUID_WEIGHT, 0.001);
 
     public double unitValue;
     public UnitType unitType;
