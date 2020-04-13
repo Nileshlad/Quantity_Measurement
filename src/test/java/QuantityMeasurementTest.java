@@ -178,7 +178,7 @@ public class QuantityMeasurementTest {
         Assert.assertEquals(3, totalValue, 0);
     }
 
-    //TEST CASE 1.23 ADDITION 1 FEET AND 2 INCH
+    //TEST CASE 1.24 ADDITION 1 FEET AND 2 INCH
     @Test
     public void given1FeetAnd2Inch_shouldReturnAdditionInInch() {
         QuantityMeasurement first = new QuantityMeasurement(Unit.FEET, 1);
@@ -186,4 +186,6 @@ public class QuantityMeasurementTest {
         double totalValue = first.getAddition(second);
         Assert.assertEquals(14, totalValue, 0);
     }
+
+    //use case 5
 }
