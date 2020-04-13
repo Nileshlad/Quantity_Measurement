@@ -5,6 +5,7 @@ import org.junit.Assert;
 import org.junit.Test;
 
 public class QuantityMeasurementTest {
+    //FEET TEST CASES USE CASE 1
     //TEST CASE 1.1 EQUAL METHOD
     @Test
     public void givenZeroFeetAndZeroFeet_shouldReturnEqualTrue() throws QuantityMeasurementException {
@@ -87,7 +88,7 @@ public class QuantityMeasurementTest {
         Assert.assertNotEquals(first, second);
     }
 
-    //TEST CASE 1.13
+    //TEST CASE 1.13 EQUAL CHECK VALUE
     @Test
     public void givenOneInchAndOneFeet_shouldReturnNotEquals() {
         QuantityMeasurement inch = new QuantityMeasurement(Unit.INCH, 1);
@@ -231,5 +232,13 @@ public class QuantityMeasurementTest {
         QuantityMeasurement grams = new QuantityMeasurement(Unit.GRAMS, 1000);
         double addition = kg.getAddition(grams);
         Assert.assertEquals(1001,addition,0);
+    }
+    //USE CASE 8
+    //TEST CASE 1.30    TO 212 F = 100 C
+    @Test
+    public void givenFahrenheitToCelsius_shouldReturnEqual() {
+        QuantityMeasurement fahrenheit = new QuantityMeasurement(Unit.FAHRENHEIT, 212);
+        QuantityMeasurement celsius = new QuantityMeasurement(Unit.CELSIUS, 100);
+        Assert.assertEquals(fahrenheit, celsius);
     }
 }

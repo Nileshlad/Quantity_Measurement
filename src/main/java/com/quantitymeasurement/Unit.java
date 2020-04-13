@@ -10,8 +10,10 @@ public enum Unit {
     ML(UnitType.LIQUID_WEIGHT, 0.001),
     KG(UnitType.SOLID_WEIGHT,1),
     GRAMS(UnitType.SOLID_WEIGHT,0.001),
-    TON(UnitType.SOLID_WEIGHT,1000);
-    ;
+    TON(UnitType.SOLID_WEIGHT,1000),
+    FAHRENHEIT(UnitType.TEMPERATURE, 1),
+    CELSIUS(UnitType.TEMPERATURE, 2.12);
+
 
     public double unitValue;
     public UnitType unitType;

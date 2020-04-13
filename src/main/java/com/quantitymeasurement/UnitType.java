@@ -1,6 +1,6 @@
 package com.quantitymeasurement;
 
 public enum UnitType {
-    LENGTH,LIQUID_WEIGHT,SOLID_WEIGHT
+    LENGTH,LIQUID_WEIGHT,SOLID_WEIGHT,TEMPERATURE;
 
 }
