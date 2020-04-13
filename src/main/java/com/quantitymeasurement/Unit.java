@@ -1,24 +1,17 @@
 package com.quantitymeasurement;
 
 public enum Unit {
-    FEET {
-        @Override
-        public double convertor(double value) {
-            return value * 12;
-        }
-    },
-    INCH {
-        @Override
-        public double convertor(double value) {
-            return value;
-        }
-    },
-    YARD {
-        @Override
-        public double convertor(double value) {
-            return value * 36;
-        }
-    };
+    FEET(12),
+    INCH(1),
+    YARD(36);
 
-    public abstract double convertor(double value);
+    private double unitValue;
+
+    Unit(double i) {
+        unitValue = i;
+    }
+
+    public double convertor(double value) {
+        return this.unitValue * value;
+    }
 }

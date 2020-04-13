@@ -40,8 +40,8 @@ public class QuantityMeasurementTest {
     //TEST CASE 1.7
     @Test
     public void givenZeroInchAndZeroInch_shouldReturnEqualTrue() throws QuantityMeasurementException {
-        LengthMesurement first = new LengthMesurement(Unit.INCH, 0.0);
-        LengthMesurement second = new LengthMesurement(Unit.INCH, 0.0);
+        LengthMesurement first = new LengthMesurement(Unit.INCH, 1);
+        LengthMesurement second = new LengthMesurement(Unit.FEET, 1);
         Assert.assertEquals(first, second);
     }
 
@@ -142,4 +142,5 @@ public class QuantityMeasurementTest {
         LengthMesurement yard = new LengthMesurement(Unit.YARD, 1);
         Assert.assertEquals(yard, inch);
     }
+
 }
